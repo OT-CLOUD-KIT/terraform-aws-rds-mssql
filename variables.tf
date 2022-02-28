@@ -63,8 +63,8 @@ variable "allocated_storage" {
   default = 20
 }
 
-variable "primary_subnet_name" {
-  description = "primary subnet name"
+variable "subnet_group_name" {
+  description = "subnet group name"
   type = string
   default = "db_sn_1"
 }
