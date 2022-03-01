@@ -4,10 +4,10 @@ variable "engine_name" {
   default     = "sqlserver-ex"
 }
 
-variable "identifier_prefix_name" {
+variable "identifier" {
   description = "name of db identifier"
-  type = string
-  default = "mssql-server"
+  type        = string
+  default     = "mssql-server"
 }
 
 variable "db_name" {
@@ -59,30 +59,30 @@ variable "instance_class" {
 
 variable "allocated_storage" {
   description = "storage size"
-  type = number
-  default = 20
+  type        = number
+  default     = 20
 }
 
 variable "subnet_group_name" {
   description = "subnet group name"
-  type = string
-  default = "db_sn_1"
+  type        = string
+  default     = "db_sn_1"
 }
 
 variable "database_subnet_ids" {
   description = "ids of database subnets"
-  type = list(string)
-  default = null
+  type        = list(string)
+  default     = null
 }
 
 variable "database_security_groups" {
   description = "security group of database"
-  type = list(any)
-  default = []
+  type        = list(any)
+  default     = []
 }
 
 variable "tags" {
   description = "Additional tags for the VPC"
   type        = map(string)
-  default = {}
+  default     = {}
 }
