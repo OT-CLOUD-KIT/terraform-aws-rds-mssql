@@ -65,7 +65,7 @@ Output
 
 ### Contributor
 
-|  [![Rishabh Sharma][rishabh_avatar]][rishabh_homepage]<br/>[Rishabh Sharma][rishabh_homepage] |  [![Aareeb Ali][areeb_avatar]][areeb_homepage]<br/>[Areeb Sharma][areeb_homepage] |
+|  [![Rishabh Sharma][rishabh_avatar]][rishabh_homepage]<br/>[Rishabh Sharma][rishabh_homepage] |  [![Aareeb Ali][areeb_avatar]][areeb_homepage]<br/>[Areeb Ali][areeb_homepage] |
 |---|---|
 
   [rishabh_homepage]: https://gitlab.com/rishabh.sharma7
