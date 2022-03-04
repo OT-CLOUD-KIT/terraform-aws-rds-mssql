@@ -1,14 +1,12 @@
-AWS RDS MSSql Module
-====================
+# MSSQL
 
-Terraform module which creates RDS MSSql Database Instance
+[![Opstree Solutions][opstree_avatar]][opstree_homepage]<br/>[Opstree Solutions][opstree_homepage] 
 
-Terraform Version
-=================
+  [opstree_homepage]: https://opstree.github.io/
+  [opstree_avatar]: https://img.cloudposse.com/150x150/https://github.com/opstree.png
 
-Terraform v1.1.4
-
-
+- This terraform module will create a MSSQL Instance, Subnet group and complete database setup.
+- This projecct is a part of opstree's ot-aws initiative for terraform modules.
 
 Usage
 =====
@@ -46,3 +44,31 @@ Inputs
 | password | Database Password | `string` | `"Opstree#12345"` | yes |
 | multi_az | Enable or disbale Multi AZ | `boolean` | `"false"` | no |
 | instance_class | Instance type from an AWS predefined list | `string` | `"db.t3.small"` | yes |
+
+ 
+## Related Projects
+
+Check out these related projects.
+
+- [network_skeleton](https://gitlab.com/ot-aws/terrafrom_v0.12.21/network_skeleton) - Terraform module for providing a general purpose Networking solution
+- [security_group](https://gitlab.com/ot-aws/terrafrom_v0.12.21/security_group) - Terraform module for creating dynamic Security groups
+- [eks](https://gitlab.com/ot-aws/terrafrom_v0.12.21/eks) - Terraform module for creating elastic kubernetes cluster.
+- [rds](https://gitlab.com/ot-aws/terrafrom_v0.12.21/rds) - Terraform module for creating Relation Datbase service.
+- [HA_ec2](https://gitlab.com/ot-aws/terrafrom_v0.12.21/ha_ec2.git) - Terraform module for creating a Highly available setup of an EC2 instance with quick disater recovery.
+- [rolling_deployment](https://gitlab.com/ot-aws/terrafrom_v0.12.21/rolling_deployment.git) - This terraform module will orchestrate rolling deployment.
+
+Output
+------
+| Name | Description |
+|------|-------------|
+| rds_address | DB instance address to create endpoint |
+
+### Contributor
+
+|  [![Rishabh Sharma][rishabh_avatar]][rishabh_homepage]<br/>[Rishabh Sharma][rishabh_homepage] |  [![Aareeb Ali][areeb_avatar]][areeb_homepage]<br/>[Areeb Sharma][areeb_homepage] |
+|---|---|
+
+  [rishabh_homepage]: https://gitlab.com/rishabh.sharma7
+  [rishabh_avatar]: https://gitlab.com/uploads/-/system/user/avatar/9890362/avatar.png?width=400
+  [areeb_homepage]: https://gitlab.com/areebali
+  [areeb_avatar]: https://gitlab.com/uploads/-/system/user/avatar/10481017/avatar.png?width=400
