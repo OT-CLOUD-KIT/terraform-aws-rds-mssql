@@ -57,6 +57,11 @@ variable "instance_class" {
   default     = "db.t3.small"
 }
 
+variable "license_model" {
+  type = string
+  description = "(optional) describe your variable"
+}
+
 variable "allocated_storage" {
   description = "storage size"
   type        = number
