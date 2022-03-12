@@ -12,5 +12,6 @@ resource "aws_db_instance" "myRDS" {
   vpc_security_group_ids   = var.database_security_groups
   instance_class           = var.instance_class
   allocated_storage        = var.allocated_storage
+  license_model            = var.license_model
   tags                     = var.tags
 }
