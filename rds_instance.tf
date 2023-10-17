@@ -17,7 +17,7 @@ resource "aws_db_instance" "myRDS" {
 
 resource "aws_cloudwatch_metric_alarm" "cpu_utilization_too_high" {
   count               = var.create_high_cpu_alarm ? 1 : 0
-  alarm_name          = "${var.prefix}rds-${var.db_instance_id}-highCPUUtilization"
+  alarm_name          = "${var.env}-rds-${var.db_instance_id}-highCPUUtilization"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = var.evaluation_period
   metric_name         = "CPUUtilization"
@@ -37,7 +37,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization_too_high" {
 
 resource "aws_cloudwatch_metric_alarm" "disk_free_storage_space_too_low" {
   count               = var.create_low_disk_space_alarm ? 1 : 0
-  alarm_name          = "${var.prefix}rds-${var.db_instance_id}-lowFreeStorageSpace"
+  alarm_name          = "${var.env}-rds-${var.db_instance_id}-lowFreeStorageSpace"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = var.evaluation_period
   metric_name         = "FreeStorageSpace"
@@ -57,7 +57,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_free_storage_space_too_low" {
 
 resource "aws_cloudwatch_metric_alarm" "memory_freeable_too_low" {
   count               = var.create_low_memory_alarm ? 1 : 0
-  alarm_name          = "${var.prefix}rds-${var.db_instance_id}-lowFreeableMemory"
+  alarm_name          = "${var.env}-rds-${var.db_instance_id}-lowFreeableMemory"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = var.evaluation_period
   metric_name         = "FreeableMemory"
@@ -77,7 +77,7 @@ resource "aws_cloudwatch_metric_alarm" "memory_freeable_too_low" {
 
 resource "aws_cloudwatch_metric_alarm" "connection_count_anomalous" {
   count               = var.create_anomaly_alarm ? 1 : 0
-  alarm_name          = "${var.prefix}rds-${var.db_instance_id}-anomalousConnectionCount"
+  alarm_name          = "${var.env}-rds-${var.db_instance_id}-anomalousConnectionCount"
   comparison_operator = "GreaterThanUpperThreshold"
   evaluation_periods  = var.evaluation_period
   threshold_metric_id = "e1"
