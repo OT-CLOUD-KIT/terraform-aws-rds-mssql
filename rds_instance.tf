@@ -1,7 +1,7 @@
 resource "aws_db_instance" "myRDS" {
   engine                   = var.engine_name
   db_name                  = var.db_name
-  identifier               = var.identifier
+  identifier               = "${var.env}-rds-${var.identifier}"
   username                 = var.username
   password                 = var.password
   db_subnet_group_name     = aws_db_subnet_group.db_sub_group.id
